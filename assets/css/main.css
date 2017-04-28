@@ -5,52 +5,45 @@
 }
 
 body{
-  background-image: url('../images/fondo.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
   color: #fff;
+  text-align: center;
 }
-h1{
-  color: #fff;
+.contenedor{
+  background: #ba4859;
+  width: 400px;
+  height: 180px;
+  padding: 10px;
+}
+
+h2{
+  color: #ba4859;
   text-align: center;
   margin: 20px;
 }
-.label{
-  display: inline-block;
-  width: 100px;
-  height: 30px;
-}
-.formulario{
-  padding-left: 20px;
-  width: 400px;
-  margin: 0 auto;
-  border: 1px solid #fff;
-  border-radius: 10px;
+
+#captcha{
+  width: 380px;
+  height: 70px;
+  font-size: 35px;
 }
 
-.input-box{
+#copyCaptcha{
+  float: left;
+  margin: 10px;
+  width: 190px;
+  height: 70px;
+  font-size: 35px;
   display: inline-block;
-  width: 200px;
-  height: 30px;
-  /*background: none;*/
-  border: 1px solid #fff;
-  margin: 10px 20px;
 }
 
-textarea{
-  display: block;
-  width: 323px;
-  height: 100px;
-  margin-bottom: 10px;
+.buttons-box{
+  width: 60px;
+  height: 70px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: -20px;
 }
-#btnSubmit{
-  display: block;
-  margin: 0 auto;
-}
-.alert{
-  color: #e04725;
-  display: none;
-}
-.show{
-  display: block;
+
+.contenedor > img{
+  margin: 10px 0;
 }
