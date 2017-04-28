@@ -2,16 +2,17 @@ window.addEventListener('load',function(){
   var inputCaptcha=document.getElementById("captcha");
   var inputTextCaptcha=document.getElementById('copyCaptcha');
   generaCaptcha(inputCaptcha);
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.getElementsByClassName('captcha')[0].style.color="#"+randomColor;
 
   document.getElementById('check').addEventListener('click',function(){
-    console.log("aaki");
     if(verifyCaptcha(inputCaptcha,inputTextCaptcha)){
       alert("Código valido");
     }else {
       alert("El código no es correcto");
     }
   });
-
+  
   document.getElementById('reboot').addEventListener('click',function(){
     generaCaptcha(inputCaptcha);
     document.getElementById('copyCaptcha').value="";
@@ -20,7 +21,6 @@ window.addEventListener('load',function(){
 });
 function generaCaptcha(input){
   var regex=/[A-Za-z0-9]{1}/;
-  // var caracter=new RegExp(regex);
   var caracter = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
 
   for (var i=0;i<6;i++){
