@@ -2,7 +2,6 @@ window.addEventListener('load',function(){
   var inputCaptcha=document.getElementById("captcha");
   var inputTextCaptcha=document.getElementById('copyCaptcha');
   generaCaptcha(inputCaptcha);
-
   document.getElementById('check').addEventListener('click',function(){
     if(verifyCaptcha(inputCaptcha,inputTextCaptcha)){
       alert("Código valido");
