@@ -2,8 +2,6 @@ window.addEventListener('load',function(){
   var inputCaptcha=document.getElementById("captcha");
   var inputTextCaptcha=document.getElementById('copyCaptcha');
   generaCaptcha(inputCaptcha);
-  var randomColor = Math.floor(Math.random()*16777215).toString(16);
-  document.getElementsByClassName('captcha')[0].style.color="#"+randomColor;
 
   document.getElementById('check').addEventListener('click',function(){
     if(verifyCaptcha(inputCaptcha,inputTextCaptcha)){
@@ -12,7 +10,7 @@ window.addEventListener('load',function(){
       alert("El código no es correcto");
     }
   });
-  
+
   document.getElementById('reboot').addEventListener('click',function(){
     generaCaptcha(inputCaptcha);
     document.getElementById('copyCaptcha').value="";
@@ -33,6 +31,8 @@ function generaCaptcha(input){
     var c7 = caracter[Math.floor(Math.random() * caracter.length)];
    }
    input.value = c1 + c2 + c3 + c4 + c5 + c6 + c7;
+   var randomColor = Math.floor(Math.random()*16777215).toString(16);
+   document.getElementsByClassName('captcha')[0].style.color="#"+randomColor;
 }
 
 function verifyCaptcha(captcha,captchaCopy){
